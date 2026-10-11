@@ -1,0 +1,35 @@
+# ---------- Secrets ----------
+.env
+.env.*
+!.env.example
+
+# ---------- Data (large / licensed; regenerate with scripts) ----------
+data/raw/*
+data/interim/*
+data/processed/*
+data/external/*
+!data/**/.gitkeep
+
+# ---------- Trained models & generated outputs ----------
+artifacts/models/*
+!artifacts/models/.gitkeep
+# Figures and experiment logs ARE committed (small, useful for the report).
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---------- Notebooks ----------
+.ipynb_checkpoints/
+
+# ---------- OS / editors ----------
+.DS_Store
+.vscode/
+.idea/

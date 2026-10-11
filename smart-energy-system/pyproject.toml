@@ -1,0 +1,13 @@
+# Tool configuration only. Dependencies live in requirements*.txt.
+
+[tool.pytest.ini_options]
+# Lets tests `import src`, `import api`, `import database` from the project root.
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

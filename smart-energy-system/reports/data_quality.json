@@ -1,0 +1,79 @@
+{
+  "source_file": "CEEW - Smart meter data Bareilly 2020.csv",
+  "is_synthetic": false,
+  "raw": {
+    "rows": 6627360,
+    "columns": [
+      "meter",
+      "timestamp",
+      "kwh",
+      "voltage",
+      "current",
+      "frequency"
+    ],
+    "meters": 46,
+    "start": "2020-01-01 00:00:00",
+    "end": "2020-12-31 23:57:00",
+    "missing_values": {
+      "meter": 0,
+      "timestamp": 0,
+      "kwh": 0,
+      "voltage": 0,
+      "current": 0,
+      "frequency": 0
+    },
+    "duplicate_rows": 0,
+    "duplicate_meter_timestamps": 0,
+    "negative_kwh": 0,
+    "timestamps_off_3min_grid": 0,
+    "kwh_stats": {
+      "count": 6627360.0,
+      "mean": 0.016727985955191812,
+      "std": 0.02421695300374192,
+      "min": 0.0,
+      "25%": 0.002,
+      "50%": 0.009,
+      "75%": 0.02,
+      "max": 0.3
+    },
+    "voltage_stats": {
+      "count": 6627360.0,
+      "mean": 226.33244088898144,
+      "std": 64.33306545698896,
+      "min": 0.0,
+      "25%": 230.95,
+      "50%": 243.84,
+      "75%": 253.57,
+      "max": 654.67
+    },
+    "frequency_stats": {
+      "count": 6627360.0,
+      "mean": 46.45963881696482,
+      "std": 12.830217503410408,
+      "min": 0.0,
+      "25%": 49.96,
+      "50%": 50.0,
+      "75%": 50.04,
+      "max": 208.33
+    }
+  },
+  "cleaning_removed": {
+    "exact_duplicates": 0,
+    "duplicate_meter_timestamps": 0,
+    "missing_kwh": 0,
+    "negative_kwh": 0,
+    "total_removed": 0
+  },
+  "hourly": {
+    "hourly_rows": 378624,
+    "complete_hours": 331368,
+    "empty_hours": 47256,
+    "partial_hours": 0
+  },
+  "features": {
+    "grid_rows": 378624,
+    "dropped_incomplete_target_hour": 47256,
+    "dropped_missing_history": 50856,
+    "model_rows": 280512
+  }
+}

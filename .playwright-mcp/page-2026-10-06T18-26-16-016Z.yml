@@ -1,0 +1,196 @@
+- generic [ref=e2]:
+  - generic [ref=e11]:
+    - heading "⚡ Smart Energy" [level=2] [ref=e15]
+    - generic [ref=e17]:
+      - paragraph [ref=e21]: Meter
+      - group [ref=e23]:
+        - combobox "Meter" [ref=e24]: All meters
+        - button "Open" [ref=e25] [cursor=pointer]
+    - generic [ref=e30]:
+      - paragraph [ref=e34]: Date range
+      - generic [ref=e37]:
+        - generic [ref=e39]:
+          - group "Date range start date" [ref=e41]:
+            - spinbutton "year, Date range start date" [ref=e42]: "2020"
+            - generic [aria-hidden] [ref=e43]: /
+            - spinbutton "month, Date range start date" [ref=e44]: "03"
+            - generic [aria-hidden] [ref=e45]: /
+            - spinbutton "day, Date range start date" [ref=e46]: "30"
+          - textbox [ref=e48]: 2020-03-30
+        - generic [aria-hidden] [ref=e49]: –
+        - generic [ref=e51]:
+          - group "Date range end date" [ref=e53]:
+            - spinbutton "year, Date range end date" [ref=e54]: "2020"
+            - generic [aria-hidden] [ref=e55]: /
+            - spinbutton "month, Date range end date" [ref=e56]: "04"
+            - generic [aria-hidden] [ref=e57]: /
+            - spinbutton "day, Date range end date" [ref=e58]: "29"
+          - textbox [ref=e60]: 2020-04-29
+    - separator [ref=e65]
+    - heading "Settings" [level=3] [ref=e69]
+    - generic [ref=e72]:
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - paragraph [ref=e78]: Tariff (INR/kWh)
+          - button "Help for Tariff (INR/kWh)" [ref=e82] [cursor=pointer]
+        - generic [ref=e87]:
+          - spinbutton "Tariff (INR/kWh)" [ref=e88]: "7.00"
+          - generic [ref=e89]:
+            - button "Decrement" [ref=e90] [cursor=pointer]
+            - button "Increment" [ref=e93] [cursor=pointer]
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - paragraph [ref=e102]: Peak threshold (percentile)
+          - button "Help for Peak threshold (percentile)" [ref=e106] [cursor=pointer]
+        - group "Peak threshold (percentile)" [ref=e110]:
+          - generic [ref=e111]:
+            - generic [ref=e112]:
+              - slider "Peak threshold (percentile) Peak threshold (percentile)" [ref=e114]: "90"
+              - generic:
+                - generic:
+                  - paragraph: "90.00"
+            - generic:
+              - generic:
+                - paragraph: "50.00"
+              - generic:
+                - paragraph: "99.00"
+      - button [ref=e118] [cursor=pointer]:
+        - paragraph [ref=e123]: Save settings
+    - separator [ref=e128]
+    - paragraph [ref=e133]:
+      - text: "Model: xgboost (v20261006-222251) Data source: synthetic_sample.csv API:"
+      - link "http://localhost:8000" [ref=e134] [cursor=pointer]:
+        - /url: http://localhost:8000
+  - generic [ref=e3]:
+    - banner [ref=e137]:
+      - generic [ref=e140]:
+        - button "Deploy" [ref=e142] [cursor=pointer]
+        - button "Main menu" [ref=e146] [cursor=pointer]
+    - generic [ref=e150]:
+      - heading "Smart Energy Consumption Dashboard" [level=1] [ref=e155]:
+        - text: Smart Energy Consumption Dashboard
+        - generic [ref=e156]:
+          - link "Link to heading":
+            - /url: "#smart-energy-consumption-dashboard"
+      - paragraph [ref=e161]: All meters · 30 Mar 2020 → 29 Apr 2020 · Timezone Asia/Kolkata · Peak = above P90
+      - alert [ref=e164]:
+        - paragraph [ref=e168]:
+          - strong [ref=e169]: Synthetic demo data.
+          - text: The model and charts are built from generated data with the CEEW schema, not the real Bareilly dataset. Re-run the pipeline on the real CSV before using results.
+      - generic [ref=e171]:
+        - tablist [ref=e172]:
+          - tab [selected] [ref=e173] [cursor=pointer]:
+            - paragraph [ref=e175]: Overview
+          - tab [ref=e177] [cursor=pointer]:
+            - paragraph [ref=e179]: Consumption
+          - tab [ref=e180] [cursor=pointer]:
+            - paragraph [ref=e182]: Prediction
+          - tab [ref=e183] [cursor=pointer]:
+            - paragraph [ref=e185]: Peak analysis
+          - tab [ref=e186] [cursor=pointer]:
+            - paragraph [ref=e188]: Cost
+          - tab [ref=e189] [cursor=pointer]:
+            - paragraph [ref=e191]: Recommendations
+          - tab [ref=e192] [cursor=pointer]:
+            - paragraph [ref=e194]: Model performance
+        - tabpanel "Overview" [ref=e195]:
+          - generic [ref=e196]:
+            - generic [ref=e198]:
+              - generic [ref=e203]:
+                - paragraph [ref=e207]: Total consumption
+                - paragraph [ref=e210]: 1,871 kWh
+              - generic [ref=e215]:
+                - paragraph [ref=e219]: Average per hour
+                - paragraph [ref=e222]: 2.515 kWh
+              - generic [ref=e227]:
+                - generic [ref=e228]:
+                  - paragraph [ref=e231]: Highest hour
+                  - button "Help for Highest hour" [ref=e235] [cursor=pointer]
+                - paragraph [ref=e241]: 7.55 kWh
+            - generic [ref=e243]:
+              - generic [ref=e248]:
+                - generic [ref=e249]:
+                  - paragraph [ref=e252]: Estimated Cost
+                  - button "Help for Estimated Cost" [ref=e256] [cursor=pointer]
+                - paragraph [ref=e262]: INR 13,099
+              - generic [ref=e267]:
+                - paragraph [ref=e271]: Peak hours
+                - paragraph [ref=e274]: "569"
+              - generic [ref=e279]:
+                - generic [ref=e280]:
+                  - paragraph [ref=e283]: Predicted next hour
+                  - button "Help for Predicted next hour" [ref=e287] [cursor=pointer]
+                - paragraph [ref=e293]: —
+            - heading "Daily consumption" [level=3] [ref=e298]:
+              - text: Daily consumption
+              - generic [ref=e299]:
+                - link "Link to heading":
+                  - /url: "#daily-consumption"
+            - generic [ref=e305]:
+              - img:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: Apr 52020
+                      - generic: Apr 12
+                      - generic: Apr 19
+                      - generic: Apr 26
+                    - generic:
+                      - generic: "0"
+                      - generic: "20"
+                      - generic: "40"
+                      - generic: "60"
+              - img:
+                - generic: kWh per day
+              - toolbar [ref=e319]:
+                - button "Download plot as a PNG" [ref=e321] [cursor=pointer]
+                - generic [ref=e324]:
+                  - button "Zoom" [ref=e325] [cursor=pointer]
+                  - button "Pan" [ref=e328] [cursor=pointer]
+                - generic [ref=e331]:
+                  - button "Zoom in" [ref=e332] [cursor=pointer]
+                  - button "Zoom out" [ref=e335] [cursor=pointer]
+                  - button "Autoscale" [ref=e338] [cursor=pointer]
+                  - button "Reset axes" [ref=e341] [cursor=pointer]
+                - button "Fullscreen" [ref=e345] [cursor=pointer]
+            - paragraph [ref=e352]: Days with missing hours (meter offline) show lower totals — missing hours are not filled in.
+            - heading "Consumption by meter" [level=3] [ref=e357]:
+              - text: Consumption by meter
+              - generic [ref=e358]:
+                - link "Link to heading":
+                  - /url: "#consumption-by-meter"
+            - generic [ref=e364]:
+              - img:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: "0"
+                      - generic: "50"
+                      - generic: "100"
+                      - generic: "150"
+                      - generic: "200"
+                      - generic: "250"
+                      - generic: "300"
+                      - generic: "350"
+                      - generic: "400"
+                      - generic: "450"
+                    - generic:
+                      - generic: SYN_03
+                      - generic: SYN_05
+                      - generic: SYN_06
+                      - generic: SYN_02
+                      - generic: SYN_01
+                      - generic: SYN_04
+              - img:
+                - generic: Total kWh
+              - toolbar [ref=e378]:
+                - button "Download plot as a PNG" [ref=e380] [cursor=pointer]
+                - generic [ref=e383]:
+                  - button "Zoom" [ref=e384] [cursor=pointer]
+                  - button "Pan" [ref=e387] [cursor=pointer]
+                - generic [ref=e390]:
+                  - button "Zoom in" [ref=e391] [cursor=pointer]
+                  - button "Zoom out" [ref=e394] [cursor=pointer]
+                  - button "Autoscale" [ref=e397] [cursor=pointer]
+                  - button "Reset axes" [ref=e400] [cursor=pointer]
+                - button "Fullscreen" [ref=e404] [cursor=pointer]

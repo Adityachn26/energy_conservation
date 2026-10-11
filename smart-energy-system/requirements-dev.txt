@@ -1,0 +1,14 @@
+# Development-only dependencies — testing, linting, EDA, notebooks.
+# Not installed inside the production Docker images.
+-r requirements.txt
+
+# ---------- Testing (Phase 18, used earlier for unit tests) ----------
+pytest==9.1.1
+pytest-cov==7.1.0
+
+# ---------- Code quality ----------
+ruff==0.16.10
+
+# ---------- EDA / notebooks (Phase 5) ----------
+matplotlib==3.11.2      # static figures for the report (reports/figures/)
+ipykernel==7.4.0        # run notebooks in VS Code / Jupyter with this venv
